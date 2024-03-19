@@ -1,0 +1,7 @@
+# SystemUiOverlayStyle có thể được sử dụng với hàm SystemChrome.setSystemUIOverlayStyle(): Thay đổi màu gioa diện hệ thống
+    1. SystemUiOverlayStyle.light: Giao diện người dùng hệ thống có màu sáng.
+    2. SystemUiOverlayStyle.dark: Giao diện người dùng hệ thống có màu tối.
+    3. SystemUiOverlayStyle.black: Giao diện người dùng hệ thống có màu đen.
+    4. SystemUiOverlayStyle.lightWithStatusBar: Giao diện người dùng hệ thống có màu sáng, ngoại trừ thanh trạng thái.
+    5. SystemUiOverlayStyle.darkWithStatusBar: Giao diện người dùng hệ thống có màu tối, ngoại trừ thanh trạng thái.
+    6. SystemUiOverlayStyle.blackWithStatusBar: Giao diện người dùng hệ thống có màu đen, ngoại trừ thanh trạng thái.

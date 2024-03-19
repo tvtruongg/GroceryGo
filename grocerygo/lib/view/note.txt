@@ -1,0 +1,3 @@
+cd grocery_back
+
+node app.js

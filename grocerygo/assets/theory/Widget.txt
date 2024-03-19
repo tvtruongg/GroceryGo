@@ -1,0 +1,72 @@
+# Trong Flutter, StatelessWidget và StatefulWidget là hai lớp cơ bản để xây dựng giao diện người dùng. Sự khác biệt chính giữa hai lớp này là:
+    => StatelessWidget: Là một lớp không thay đổi, tức là một khi được xây dựng và hiển thị lên màn hình, nó không thể thay đổi trạng thái. 
+       Điều này có nghĩa rằng nếu bạn cần cập nhật giao diện người dùng trong StatelessWidget, bạn phải xây dựng lại toàn bộ widget. 
+       StatelessWidget thường được sử dụng cho các thành phần giao diện người dùng đơn giản và không thay đổi, ví dụ như hiển thị các văn bản tĩnh.
+       
+    => StatefulWidget: Là một lớp có khả năng thay đổi trạng thái. StatefulWidget được sử dụng khi bạn cần cập nhật giao diện người dùng dựa trên các thay đổi trong trạng thái của ứng dụng. 
+       StatefulWidget bao gồm hai phần chính là Stateful Widget và State. Widget chính xác là StatelessWidget và nó giữ trạng thái trong lớp State tương ứng. 
+       Khi trạng thái thay đổi, Flutter sẽ gọi phương thức build() để xây dựng lại giao diện người dùng. Các thành phần giao diện người dùng phức tạp hơn, như danh sách cuộn hay biểu đồ tương tác, thường được xây dựng bằng StatefulWidget. 
+
+
+# Container thường được sử dụng trong các trường hợp sau:
+   1. Định dạng và trình bày: Container được sử dụng để định dạng và trình bày các widget con bên trong nó. Bạn có thể sử dụng Container để áp dụng padding, margin, định dạng căn chỉnh và các thuộc tính khác cho các widget con.
+   2. Xác định kích thước: Container cho phép bạn xác định kích thước của nó bằng cách sử dụng thuộc tính width và height. Bạn có thể đặt kích thước cố định hoặc cho phép Container mở rộng theo kích thước cha bằng cách sử dụng giá trị như double.infinity.
+   3. Hình dạng và viền: Bằng cách sử dụng BoxDecoration, bạn có thể định dạng hình dạng của Container, ví dụ như bo góc, viền, màu sắc nền, hình ảnh nền và các hiệu ứng khác.
+   4. Chứa widget con: Container là một khung chứa cho các widget con. Bạn có thể đặt bất kỳ widget nào vào trong Container, bao gồm cả các widget cơ bản như Text, Image, Icon và cả các widget phức tạp hơn như Row, Column, ListView, v.v.
+   5. Đặt màu sắc và hình nền: Container có thể được sử dụng để đặt màu sắc nền cho một phần của giao diện. Bạn có thể sử dụng BoxDecoration để đặt màu sắc, hình ảnh hoặc các hiệu ứng khác cho nền của Container.
+
+# CarouselOptions:
+   itemCount
+   itemBuilder:
+      (BuildContext context, int itemIndex, int pageViewIndex) {}
+      1. itemIndex: vị trí hình ảnh
+      2. pageViewIndex: vị trí trang
+   options:
+      1. height: Chiều cao CarouselSlider (pixel).
+      2. aspectRatio: Tỷ lệ khung hình ảnh (16:9 cho màn hình rộng).
+      3. viewportFraction: Phần ảnh hiển thị trong vùng nhìn (0.8 là 80%).
+      4. initialPage: Hình ảnh hiển thị ban đầu (0 là ảnh đầu tiên).
+      5. enableInfiniteScroll: Cuộn vô hạn (true).
+      6. reverse: Hướng cuộn (false là trái sang phải).
+      7. autoPlay: Phát tự động (true).
+      8. autoPlayInterval: Khoảng thời gian chuyển ảnh tự động (3 giây).
+      9. autoPlayAnimationDuration: Thời lượng chuyển ảnh tự động (800ms).
+      10. autoPlayCurve: Đường cong thời gian chuyển ảnh (Curves.fastOutSlowIn).
+      11. enlargeCenterPage: Phóng to ảnh hiện tại (true).
+      12. enlargeFactor: Mức độ phóng to ảnh hiện tại (0.3 là 30%).
+      13. onPageChanged: Hàm gọi lại khi chuyển trang (callbackFunction).
+      14. scrollDirection: Hướng cuộn (Axis.horizontal là ngang).
+
+# Shimmer
+   1. baseColor: Màu sắc cơ bản của widget con khi không có hiệu ứng shimmer.
+   2. highlightColor: Màu sắc nổi bật của widget con khi có hiệu ứng shimmer.
+   3. direction: Hướng di chuyển của hiệu ứng shimmer (ltr, rtl, ttb, btt).
+      1. ShimmerDirection.ltr: Hiệu ứng shimmer di chuyển từ trái qua phải.
+      2. ShimmerDirection.rtl: Hiệu ứng shimmer di chuyển từ phải qua trái.
+      3. ShimmerDirection.ttb: Hiệu ứng shimmer di chuyển từ trên xuống dưới.
+      4. ShimmerDirection.btt: Hiệu ứng shimmer di chuyển từ dưới lên trên.
+   4. enabled: Xác định xem hiệu ứng shimmer có được kích hoạt hay không.
+   5. child: Widget con mà bạn muốn áp dụng hiệu ứng shimmer lên.
+   6. period: Thời gian hoàn thành một chu kỳ của hiệu ứng shimmer.
+
+# Tabbar
+   1. controller: Đối tượng TabController để quản lý trạng thái và chuyển đổi giữa các tab.
+   2. tabs: Danh sách các Tab đại diện cho các tab hiển thị trong TabBar.
+   3. isScrollable: Giá trị boolean xác định xem thanh tab có thể cuộn hay không. Nếu được đặt thành true, các tab sẽ có thể cuộn ngang.
+   4. indicatorColor: Màu sắc của dấu hiệu chỉ ra vị trí của tab hiện tại.
+   5. indicatorWeight: Độ dày của dấu hiệu chỉ ra vị trí của tab hiện tại.
+   6. indicatorPadding: Khoảng cách giữa dấu hiệu và nội dung của tab.
+   7. indicator: Một đối tượng BoxDecoration để tạo dấu hiệu tùy chỉnh thay vì một dấu hiệu mặc định.
+   8. indicatorSize: Kích thước của dấu hiệu. Có thể là TabBarIndicatorSize.tab (kích thước bằng với chiều rộng của tab) hoặc TabBarIndicatorSize.label (kích thước bằng với chiều rộng của văn bản tab).
+   9. labelColor: Màu sắc của văn bản của tab hiện tại.
+   10. labelStyle: Kiểu chữ của văn bản của tab hiện tại.
+   11. unselectedLabelColor: Màu sắc của văn bản của tab không được chọn.
+   12. unselectedLabelStyle: Kiểu chữ của văn bản của tab không được chọn.
+   13. dragStartBehavior: Xác định cách xử lý sự kiện kéo bắt đầu. Có thể là DragStartBehavior.start, DragStartBehavior.down, hoặc DragStartBehavior.down.
+   14. onTap: Một hàm được gọi khi người dùng chọn một tab cụ thể.
+   15. physics: Cơ chế vật lý xác định cách các tab phản ứng với cuộn. Ví dụ: NeverScrollableScrollPhysics để vô hiệu hóa cuộn, AlwaysScrollableScrollPhysics để luôn cho phép cuộn, BouncingScrollPhysics để tạo hiệu ứng nảy khi cuộn.
+   16. primary: Xác định xem TabBar có nằm trong AppBar chính hay không.
+   17. automaticIndicatorColorAdjustment: Xác định xem màu sắc của dấu hiệu có tự động điều chỉnh cho phù hợp với indicatorColor hay không.
+   18. overlayColor: Màu sắc của lớp phủ khi người dùng chạm vào một tab.
+   19. mouseCursor: Con trỏ chuột khi di chuột qua tab.
+   20. enableFeedback: Xác định xem có hiển thị phản hồi âm thanh khi người dùng chạm vào tab hay không.

@@ -1,0 +1,8 @@
+ReferenceError: user_id is not defined
+    at C:\android\repository\flutter\GroceryGo\grocery_back\controller\client\client_home.js:70:77
+    at Object.CheckParameterValid (C:\android\repository\flutter\GroceryGo\grocery_back\helper\helper.js:83:20)
+    at C:\android\repository\flutter\GroceryGo\grocery_back\controller\client\client_home.js:68:20
+    at C:\android\repository\flutter\GroceryGo\grocery_back\common\function_common.js:20:32
+    at Query.onResult (C:\android\repository\flutter\GroceryGo\grocery_back\helper\db_helper.js:78:28)
+    at C:\android\repository\flutter\GroceryGo\grocery_back\node_modules\mysql2\lib\commands\query.js:86:16
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)

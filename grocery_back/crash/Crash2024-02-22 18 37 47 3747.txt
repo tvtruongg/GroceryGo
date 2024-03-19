@@ -1,0 +1,9 @@
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (node:_http_outgoing:652:11)
+    at ServerResponse.header (C:\android\repository\flutter\GroceryGo\grocery_back\node_modules\express\lib\response.js:794:10)
+    at ServerResponse.send (C:\android\repository\flutter\GroceryGo\grocery_back\node_modules\express\lib\response.js:174:12)
+    at ServerResponse.json (C:\android\repository\flutter\GroceryGo\grocery_back\node_modules\express\lib\response.js:278:15)
+    at C:\android\repository\flutter\GroceryGo\grocery_back\controller\client\client_home.js:105:22
+    at Query.onResult (C:\android\repository\flutter\GroceryGo\grocery_back\helper\db_helper.js:78:28)
+    at C:\android\repository\flutter\GroceryGo\grocery_back\node_modules\mysql2\lib\commands\query.js:86:16
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)

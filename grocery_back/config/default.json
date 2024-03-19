@@ -1,0 +1,10 @@
+{
+    "dbConfig": {
+        "host": "localhost",
+        "user": "root",
+        "password": "Truong2002@",
+        "database": "grocerygo",
+        "timezone": "+07:00",
+        "charset": "utf8"
+    }
+}

@@ -1,0 +1,20 @@
+// Các dòng mã này được sử dụng trong Dart để xuất (export) các module, file, hoặc thư mục khác trong một thư mục hoặc dự án.
+export './colors.dart';
+export './images.dart';
+export './icons.dart';
+export './strings.dart';
+export './styles.dart';
+export './vnd.dart';
+export './lists.dart';
+export 'package:flutter/material.dart';
+export 'package:velocity_x/velocity_x.dart';
+export 'package:get/get.dart';
+export 'package:zoom_tap_animation/zoom_tap_animation.dart';
+export 'package:auto_size_text/auto_size_text.dart';
+export 'package:easy_refresh/easy_refresh.dart';
+export 'package:cached_network_image/cached_network_image.dart';
+export 'package:carousel_slider/carousel_slider.dart';
+export 'package:dots_indicator/dots_indicator.dart';
+export 'package:flutter_easyloading/flutter_easyloading.dart';
+export 'package:shimmer/shimmer.dart';
+export 'package:flutter_rating_bar/flutter_rating_bar.dart';
